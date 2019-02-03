@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Import Head Count Data" max_length="40" name="x_294297_seat_mana_import_head_count_data" type="collection">
+        <element attributes="import_attribute_name=Account,edge_encryption_enabled=true" label="Account" max_length="40" name="u_account" type="string"/>
+        <element attributes="import_attribute_name=Building,edge_encryption_enabled=true" label="Building" max_length="40" name="u_building" type="string"/>
+        <element attributes="import_attribute_name=Building Location,edge_encryption_enabled=true" label="Building Location" max_length="40" name="u_building_location" type="string"/>
+        <element attributes="import_attribute_name=Campus,edge_encryption_enabled=true" label="Campus" max_length="40" name="u_campus" type="string"/>
+        <element attributes="import_attribute_name=Class,edge_encryption_enabled=true" label="Class" max_length="40" name="u_class" type="string"/>
+        <element attributes="import_attribute_name=EMPID" label="EMPID" max_length="40" name="u_empid" type="integer"/>
+        <element attributes="import_attribute_name=Floor,edge_encryption_enabled=true" label="Floor" max_length="40" name="u_floor" type="string"/>
+        <element attributes="import_attribute_name=Max occupancy" label="Max occupancy" max_length="40" name="u_max_occupancy" type="integer"/>
+        <element attributes="import_attribute_name=Name,edge_encryption_enabled=true" label="Name" max_length="40" name="u_name" type="string"/>
+        <element attributes="import_attribute_name=Occupiable,edge_encryption_enabled=true" label="Occupiable" max_length="40" name="u_occupiable" type="string"/>
+        <element attributes="import_attribute_name=ODC/General,edge_encryption_enabled=true" label="ODC/General" max_length="40" name="u_odc_general" type="string"/>
+        <element attributes="import_attribute_name=Primary,edge_encryption_enabled=true" label="Primary" max_length="40" name="u_primary" type="string"/>
+        <element attributes="import_attribute_name=User,edge_encryption_enabled=true" label="User" max_length="40" name="u_user" type="string"/>
+    </element>
+</database>

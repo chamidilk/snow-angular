@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_294297_seat_mana_Graphs.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	<g2:evaluate var="jvar_rdata">
+		var rawData = [];
+
+        var headcount = new GlideRecord('x_294297_seat_mana_head_count');
+        headcount.orderBy('account');
+        headcount.query();
+
+        while(headcount.next()){
+            rawData.push({
+                account: headcount.getDisplayValue('account')
+            });
+        }
+
+        var rdata = JSON.stringify(rawData);
+		rdata
+	</g2:evaluate>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" />
+	<link href="https://naver.github.io/billboard.js/release/latest/dist/theme/insight.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet"/>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+
+	<style>
+		/*
+		* Base structure
+		*/
+		/* Move down content because we have a fixed navbar that is 50px tall */
+
+		body {
+		padding-top: 50px;
+		font-family: 'Montserrat' !important;
+		}
+
+		.bb svg {
+		font-family: 'Montserrat' !important;
+		}
+
+		.bb-tooltip-container {
+		font-family: 'Montserrat' !important;
+		}
+		/*
+		* Global add-ons
+		*/
+
+		.sub-header {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
+		}
+		/*
+		* Top navigation
+		* Hide default border to remove 1px line.
+		*/
+
+		.navbar-fixed-top {
+		border: 0;
+		}
+		/*
+		* Sidebar
+		*/
+		/* Hide for mobile, show later */
+
+		.sidebar {
+		display: none;
+		}
+
+		@media (min-width: 768px) {
+		.sidebar {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		display: block;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		/* Scrollable contents if viewport is shorter than content. */
+		background-color: #f5f5f5;
+		border-right: 1px solid #eee;
+		}
+		}
+		/* Sidebar navigation */
+
+		.nav-sidebar {
+		margin-right: -21px;
+		/* 20px padding + 1px border */
+		margin-bottom: 20px;
+		margin-left: -20px;
+		}
+
+		.nav-sidebar > li > a {
+		padding-right: 20px;
+		padding-left: 20px;
+		}
+
+		.nav-sidebar > .active > a,
+		.nav-sidebar > .active > a:hover,
+		.nav-sidebar > .active > a:focus {
+		color: #fff;
+		background-color: #428bca;
+		}
+		/*
+		* Main content
+		*/
+
+		.main {
+		padding: 20px;
+		}
+
+		@media (min-width: 768px) {
+		.main {
+		padding-right: 40px;
+		padding-left: 40px;
+		}
+		}
+
+		.main .page-header {
+		margin-top: 0;
+		}
+		/*
+		* Placeholder dashboard ideas
+		*/
+
+		.placeholders {
+		margin-bottom: 30px;
+		text-align: center;
+		}
+
+		.placeholders h4 {
+		margin-bottom: 0;
+		}
+
+		.placeholder {
+		margin-bottom: 20px;
+		}
+
+		.placeholder img {
+		display: inline-block;
+		border-radius: 50%;
+		}
+	</style>
+
+	
+
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Seat Management</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Help</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<input type="text" class="form-control" placeholder="Search..." />
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar">
+						<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+					</ul>
+						
+				</div>
+				
+				
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Dashboard</h1>
+					
+					
+					
+					<div class="row">
+						
+						
+						<div class="col-md-3">
+							
+							<div class="panel panel-default">
+  <div class="panel-heading">Strategic Location</div>
+  <div class="panel-body">
+    <div class="dropdown clearfix" >
+  <button class="btn btn-default dropdown-toggle clearfix" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+							
+							
+						</div>
+						
+						<div class="col-md-3">
+							
+							<div class="panel panel-default">
+  <div class="panel-heading">Country</div>
+  <div class="panel-body">
+    <div class="dropdown clearfix" >
+  <button class="btn btn-default dropdown-toggle clearfix" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+							
+							
+						</div>
+						
+						<div class="col-md-3">
+							
+							<div class="panel panel-default">
+  <div class="panel-heading">Region</div>
+  <div class="panel-body">
+    <div class="dropdown clearfix" >
+  <button class="btn btn-default dropdown-toggle clearfix" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+							
+							
+						</div>
+						
+						<div class="col-md-3">
+							
+							<div class="panel panel-default">
+  <div class="panel-heading">Location</div>
+  <div class="panel-body">
+    <div class="dropdown clearfix" >
+  <button class="btn btn-default dropdown-toggle clearfix" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  </div>
+</div>
+							
+							
+						</div>
+						
+					</div>
+
+					<div class="row ">
+						
+						<!-- <div class="col-sm-3 col-md-4">
+							
+							
+							
+							
+							<div id="tree" />
+						
+						</div> -->
+						<div class="col-xs-6 col-sm-6  col-md-6">
+							<div id="chart1" />
+							
+						</div>
+						<div class="col-xs-6 col-sm-6  col-md-6">
+							<div id="chart2" />
+							
+						</div>
+						
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+
+	<script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.min.js"></script>
+	
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+
+	<script>
+		(function($) {
+		
+		var data = "$[rdata]"
+		var dataObj = JSON.parse(data.replace('\\',''));
+		var groupedData = _.groupBy(dataObj, function(rec){
+                return rec;
+            });
+		var x = _.uniq(_.map(dataObj, function(obj){
+                return obj.account;
+        }));
+		
+		var compObj = {};
+		
+		_.map(x , function(account) {
+			compObj[account] = 0;
+		})
+		
+		_.map(dataObj, function(account) {
+			compObj[account.account] = compObj[account.account] + 1;
+		})
+		
+		
+		
+		var x = ["x"];
+		var data1 = ["count"]
+		
+		_.map(Object.keys(compObj), function(key){
+			x.push(key);
+			data1.push(compObj[key]);
+		})
+		
+		
+		
+
+		bb.generate({
+			bindto: "#chart1",
+			data: {
+				x: "x",
+				columns: [
+				  ["x", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31"],
+				  ["sample", 30, 20, 50, 40, 60, 50.7, 30, 20, 50, 40]
+				],
+				names: {
+				  sample: `sqft/seat`
+				},
+				labels: {
+				  format: {
+					sample: function (x) {
+					  return _.ceil(x)
+					}
+				  },
+
+				  position: {
+					x: 0,
+					y: -10
+				  }
+				},
+			  },
+
+
+			  axis: {
+
+				x: {
+				  type: "timeseries",
+				  height: 80,
+				  tick: {
+					rotate: -90,
+					multiline: false,
+					tooltip: true,
+					format: function (x) {
+					  let FY = _.parseInt(x.getFullYear()) + _.floor((x.getMonth() + 9) / 12)
+					  return `FY${FY % 1000}-${_.toUpper(Object.keys(constants.M).filter(key => constants.M[key] === x.getMonth() + 1)[0])}`;
+					}
+				  }
+				},
+
+				y: {
+				  max: 100,
+
+				  tick: {
+					format: function (x) { return x },
+				  }
+				}
+			  },
+		});
+		
+		bb.generate({
+			bindto: "#chart2",
+			data: {
+				x: "x",
+				columns: [
+				  ["x", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31"],
+				  ["sample", 30, 20, 50, 40, 60, 50.7, 30, 20, 50, 40]
+				],
+				names: {
+				  sample: `sqft/seat`
+				},
+				labels: {
+				  format: {
+					sample: function (x) {
+					  return _.ceil(x)
+					}
+				  },
+
+				  position: {
+					x: 0,
+					y: -10
+				  }
+				},
+			  },
+
+
+			  axis: {
+
+				x: {
+				  type: "timeseries",
+				  height: 80,
+				  tick: {
+					rotate: -90,
+					multiline: false,
+					tooltip: true,
+					format: function (x) {
+					  let FY = _.parseInt(x.getFullYear()) + _.floor((x.getMonth() + 9) / 12)
+					  return `FY${FY % 1000}-${_.toUpper(Object.keys(constants.M).filter(key => constants.M[key] === x.getMonth() + 1)[0])}`;
+					}
+				  }
+				},
+
+				y: {
+				  max: 100,
+
+				  tick: {
+					format: function (x) { return x },
+				  }
+				}
+			  },
+		});
+		
+		var data = [
+					  {
+						text: "Parent 1",
+						icon: "fa fa-user",
+						nodes: [
+						  {
+							text: "Child 1",
+							nodes: [
+							  {
+								text: "Grandchild 1"
+							  },
+							  {
+								text: "Grandchild 2"
+							  }
+							]
+						  },
+						  {
+							text: "Child 2"
+						  }
+						]
+					  },
+					  {
+						text: "Parent 2"
+					  },
+					  {
+						text: "Parent 3"
+					  },
+					  {
+						text: "Parent 4"
+					  },
+					  {
+						text: "Parent 5"
+					  }
+		];
+		
+		$('#tree').treeview({
+			data: data,         // data is not optional
+			
+		});
+		
+		
+
+
+		})(jQuery)
+	</script>
+
+</j:jelly>]]></html>
+        <name>Graphs</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-21 16:26:16</sys_created_on>
+        <sys_id>26841ec7db036300fc3164d748961967</sys_id>
+        <sys_mod_count>84</sys_mod_count>
+        <sys_name>Graphs</sys_name>
+        <sys_package display_value="Seat Management" source="x_294297_seat_mana">b544d376db0b2300fc3164d748961970</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Seat Management">b544d376db0b2300fc3164d748961970</sys_scope>
+        <sys_update_name>sys_ui_page_26841ec7db036300fc3164d748961967</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-23 10:30:38</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="max_occupnacy" label="Max Occupnacy" language="en" table="x_294297_seat_mana_head_count">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>max_occupnacy</element>
+            <help/>
+            <hint/>
+            <label>Max Occupnacy</label>
+            <language>en</language>
+            <name>x_294297_seat_mana_head_count</name>
+            <plural>Max Occupnacies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-01-21 05:52:31</sys_created_on>
+            <sys_id>5806448bdbcb2300fc3164d748961986</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Max Occupnacy</sys_name>
+            <sys_package display_value="Seat Management" source="x_294297_seat_mana">b544d376db0b2300fc3164d748961970</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Seat Management">b544d376db0b2300fc3164d748961970</sys_scope>
+            <sys_update_name>sys_documentation_x_294297_seat_mana_head_count_max_occupnacy_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-01-21 05:52:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

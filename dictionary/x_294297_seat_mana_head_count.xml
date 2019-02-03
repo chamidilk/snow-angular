@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Head Count" max_length="40" name="x_294297_seat_mana_head_count" type="collection">
+        <element label="Account" mandatory="true" max_length="20" name="account" type="string"/>
+        <element label="Building" max_length="10" name="building" type="string_full_utf8"/>
+        <element label="Building Location" max_length="20" name="building_location" type="string"/>
+        <element label="Campus" max_length="20" name="campus" type="string"/>
+        <element label="Class" max_length="10" name="class" type="string"/>
+        <element label="EMPID" mandatory="true" max_length="10" name="empid" type="longint"/>
+        <element label="Floor" max_length="10" name="floor" type="string"/>
+        <element label="Max Occupnacy" mandatory="true" max_length="10" name="max_occupnacy" type="integer"/>
+        <element label="Name" mandatory="true" max_length="10" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Occupiable" max_length="40" name="occupiable" type="boolean"/>
+        <element choice="1" label="ODC/General" mandatory="true" max_length="7" name="odc_general" type="string">
+            <choice>
+                <element label="ODC" sequence="0" value="odc"/>
+                <element label="General" sequence="1" value="general"/>
+            </choice>
+        </element>
+        <element label="Primary" max_length="10" name="primary" type="boolean"/>
+        <element label="User" max_length="20" name="user" type="string"/>
+    </element>
+</database>

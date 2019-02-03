@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[(function($){
+  $(function(){
+	  
+	  
+	  
+	  var locations = {"data":[{"subLocations":[],"_id":"5c19c5dfe54a573c6cb4ba77","code":"IN_Blr_Prestige","name":"IN_Blr_Prestige","timestamp":"2018-12-19T04:15:27.511Z","__v":0,"sqft":1000,"type":"location"},{"subLocations":[],"_id":"5c19c5ebe54a573c6cb4ba78","code":"IN_Blr_RMZ","name":"IN_Blr_RMZ","timestamp":"2018-12-19T04:15:39.519Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c5f6e54a573c6cb4ba79","code":"IN_Che_AKDR","name":"IN_Che_AKDR","timestamp":"2018-12-19T04:15:50.401Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c601e54a573c6cb4ba7a","code":"IN_Che_DLF","name":"IN_Che_DLF","timestamp":"2018-12-19T04:16:01.408Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c60be54a573c6cb4ba7b","code":"IN_Che_Navalur","name":"IN_Che_Navalur","timestamp":"2018-12-19T04:16:11.543Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c61ee54a573c6cb4ba7c","code":"IN_GGN_InfoCity","name":"IN_GGN_InfoCity","timestamp":"2018-12-19T04:16:30.808Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c62ce54a573c6cb4ba7d","code":"IN_Hyd_Campus","name":"IN_Hyd_Campus","timestamp":"2018-12-19T04:16:44.557Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c636e54a573c6cb4ba7e","code":"IN_Hyd_Capital","name":"IN_Hyd_Capital","timestamp":"2018-12-19T04:16:54.362Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c650e54a573c6cb4ba7f","code":"IN_Mum_eTouch_2ndFl","name":"IN_Mum_eTouch_2ndFl","timestamp":"2018-12-19T04:17:20.107Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c65de54a573c6cb4ba80","code":"IN_Mum_eTouch_7thFl","name":"IN_Mum_eTouch_7thFl","timestamp":"2018-12-19T04:17:33.502Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c668e54a573c6cb4ba81","code":"IN_Mum_SEEPZ","name":"IN_Mum_SEEPZ","timestamp":"2018-12-19T04:17:44.322Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c673e54a573c6cb4ba82","code":"IN_Mum_Thane","name":"IN_Mum_Thane","timestamp":"2018-12-19T04:17:55.679Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c67de54a573c6cb4ba83","code":"IN_Pun_EON","name":"IN_Pun_EON","timestamp":"2018-12-19T04:18:05.924Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c687e54a573c6cb4ba84","code":"IN_Pun_eTouch","name":"IN_Pun_eTouch","timestamp":"2018-12-19T04:18:15.784Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c691e54a573c6cb4ba85","code":"IN_Pun_InfoCity","name":"IN_Pun_InfoCity","timestamp":"2018-12-19T04:18:25.938Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c6e2e54a573c6cb4ba86","code":"LK_Colombo","name":"LK_Colombo","timestamp":"2018-12-19T04:19:46.136Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c70ee54a573c6cb4ba87","code":"CA_Ont_Toronto","name":"CA_Ont_Toronto","timestamp":"2018-12-19T04:20:30.904Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c728e54a573c6cb4ba88","code":"US_CA_Fremont_eTouch","name":"US_CA_Fremont_eTouch","timestamp":"2018-12-19T04:20:56.308Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c731e54a573c6cb4ba89","code":"US_CT_Windsor","name":"US_CT_Windsor","timestamp":"2018-12-19T04:21:05.945Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c73ae54a573c6cb4ba8a","code":"US_FLO_Tampa","name":"US_FLO_Tampa","timestamp":"2018-12-19T04:21:14.237Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c743e54a573c6cb4ba8b","code":"US_Indiana_IIC","name":"US_Indiana_IIC","timestamp":"2018-12-19T04:21:23.279Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c74ce54a573c6cb4ba8c","code":"US_MA_Southborough","name":"US_MA_Southborough","timestamp":"2018-12-19T04:21:32.577Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c755e54a573c6cb4ba8d","code":"US_MO_St.Louis","name":"US_MO_St.Louis","timestamp":"2018-12-19T04:21:41.636Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c75de54a573c6cb4ba8e","code":"US_NJ_JerseyCity","name":"US_NJ_JerseyCity","timestamp":"2018-12-19T04:21:49.975Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c76ae54a573c6cb4ba8f","code":"US_NJ_Piscataway","name":"US_NJ_Piscataway","timestamp":"2018-12-19T04:22:02.738Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c774e54a573c6cb4ba90","code":"US_NY_Albany","name":"US_NY_Albany","timestamp":"2018-12-19T04:22:12.112Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c77ee54a573c6cb4ba91","code":"US_NY_Lexington","name":"US_NY_Lexington","timestamp":"2018-12-19T04:22:22.306Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c78ae54a573c6cb4ba92","code":"US_NY_WlSt_14_28thFloor","name":"US_NY_WlSt_14_28thFloor","timestamp":"2018-12-19T04:22:34.350Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c794e54a573c6cb4ba93","code":"US_OH_Dublin","name":"US_OH_Dublin","timestamp":"2018-12-19T04:22:44.642Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c79fe54a573c6cb4ba94","code":"MX_Regus","name":"MX_Regus","timestamp":"2018-12-19T04:22:55.622Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7aae54a573c6cb4ba95","code":"AT_Vienna","name":"AT_Vienna","timestamp":"2018-12-19T04:23:06.151Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7b6e54a573c6cb4ba96","code":"AE_Dubai","name":"AE_Dubai","timestamp":"2018-12-19T04:23:18.551Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7c0e54a573c6cb4ba97","code":"DE_Frankfurt_(Virtual)","name":"DE_Frankfurt_(Virtual)","timestamp":"2018-12-19T04:23:28.063Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7cbe54a573c6cb4ba98","code":"DE_Munich","name":"DE_Munich","timestamp":"2018-12-19T04:23:39.567Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7dce54a573c6cb4ba99","code":"HU_Budapest_Regus","name":"HU_Budapest_Regus","timestamp":"2018-12-19T04:23:56.316Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7e3e54a573c6cb4ba9a","code":"HU_PCS_(Virtual)","name":"HU_PCS_(Virtual)","timestamp":"2018-12-19T04:24:03.843Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7ece54a573c6cb4ba9b","code":"HU_VIR_(Virtual)","name":"HU_VIR_(Virtual)","timestamp":"2018-12-19T04:24:12.779Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c7f9e54a573c6cb4ba9c","code":"SE_Gothenburg","name":"SE_Gothenburg","timestamp":"2018-12-19T04:24:25.479Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c804e54a573c6cb4ba9d","code":"SE-Stockholm","name":"SE-Stockholm","timestamp":"2018-12-19T04:24:36.091Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c80de54a573c6cb4ba9e","code":"CH_Neuchatel_(Virtual)","name":"CH_Neuchatel_(Virtual)","timestamp":"2018-12-19T04:24:45.316Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c818e54a573c6cb4ba9f","code":"CH_Zurich_(Virtual)","name":"CH_Zurich_(Virtual)","timestamp":"2018-12-19T04:24:56.226Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c821e54a573c6cb4baa0","code":"NL_Utrecht","name":"NL_Utrecht","timestamp":"2018-12-19T04:25:05.450Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c82ae54a573c6cb4baa1","code":"UK_Edinburgh","name":"UK_Edinburgh","timestamp":"2018-12-19T04:25:14.717Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c834e54a573c6cb4baa2","code":"UK_London_Finnsbury","name":"UK_London_Finnsbury","timestamp":"2018-12-19T04:25:24.598Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c840e54a573c6cb4baa3","code":"DK_(Virtual)","name":"DK_(Virtual)","timestamp":"2018-12-19T04:25:36.531Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c84de54a573c6cb4baa4","code":"IR_BRY_(Virtual)","name":"IR_BRY_(Virtual)","timestamp":"2018-12-19T04:25:49.710Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c856e54a573c6cb4baa5","code":"AU_Melbourne","name":"AU_Melbourne","timestamp":"2018-12-19T04:25:58.864Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c861e54a573c6cb4baa6","code":"AU_Sydney","name":"AU_Sydney","timestamp":"2018-12-19T04:26:09.227Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c874e54a573c6cb4baa7","code":"CN_HK_(Virtual)","name":"CN_HK_(Virtual)","timestamp":"2018-12-19T04:26:28.317Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c87ce54a573c6cb4baa8","code":"CN_Shanghai_(Virtual)","name":"CN_Shanghai_(Virtual)","timestamp":"2018-12-19T04:26:36.313Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c885e54a573c6cb4baa9","code":"JP_Tokyo","name":"JP_Tokyo","timestamp":"2018-12-19T04:26:45.125Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c890e54a573c6cb4baaa","code":"MY_KualaLampur","name":"MY_KualaLampur","timestamp":"2018-12-19T04:26:56.699Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c89fe54a573c6cb4baab","code":"NZ_(Virtual)","name":"NZ_(Virtual)","timestamp":"2018-12-19T04:27:11.394Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c8a8e54a573c6cb4baac","code":"SG_Singapore_Ascendas","name":"SG_Singapore_Ascendas","timestamp":"2018-12-19T04:27:20.734Z","__v":0,"sqft":0,"type":"location"},{"subLocations":[],"_id":"5c19c8b2e54a573c6cb4baad","code":"SG_UbiTechPark_(Rented Out)","name":"SG_UbiTechPark_(Rented Out)","timestamp":"2018-12-19T04:27:30.602Z","__v":0,"sqft":0,"type":"location"},{"subLocations":["5c19c5dfe54a573c6cb4ba77","5c19c5ebe54a573c6cb4ba78","5c19c5f6e54a573c6cb4ba79","5c19c601e54a573c6cb4ba7a","5c19c60be54a573c6cb4ba7b","5c19c61ee54a573c6cb4ba7c","5c19c62ce54a573c6cb4ba7d","5c19c636e54a573c6cb4ba7e","5c19c650e54a573c6cb4ba7f","5c19c65de54a573c6cb4ba80","5c19c668e54a573c6cb4ba81","5c19c673e54a573c6cb4ba82","5c19c687e54a573c6cb4ba84","5c19c691e54a573c6cb4ba85","5c19c67de54a573c6cb4ba83"],"_id":"5c1c4c0a22ab3f3b68d6e4b3","code":"IND","name":"India","timestamp":"2018-12-21T02:12:26.476Z","sqft":null,"type":"country","__v":0,"flagCode":"in"},{"subLocations":["5c19c6e2e54a573c6cb4ba86"],"_id":"5c1c4cea22ab3f3b68d6e4b4","code":"SL","name":"Sri Lanka","timestamp":"2018-12-21T02:16:10.540Z","sqft":null,"type":"country","__v":0,"flagCode":"lk"},{"subLocations":["5c19c70ee54a573c6cb4ba87"],"_id":"5c1c4d9b22ab3f3b68d6e4b5","code":"CAD","name":"Canada","timestamp":"2018-12-21T02:19:07.278Z","sqft":null,"type":"country","__v":0,"flagCode":"ca"},{"subLocations":["5c19c728e54a573c6cb4ba88","5c19c731e54a573c6cb4ba89","5c19c73ae54a573c6cb4ba8a","5c19c743e54a573c6cb4ba8b","5c19c74ce54a573c6cb4ba8c","5c19c755e54a573c6cb4ba8d","5c19c75de54a573c6cb4ba8e","5c19c76ae54a573c6cb4ba8f","5c19c774e54a573c6cb4ba90","5c19c77ee54a573c6cb4ba91","5c19c78ae54a573c6cb4ba92","5c19c794e54a573c6cb4ba93"],"_id":"5c1c4dc722ab3f3b68d6e4b6","code":"USA","name":"USA","timestamp":"2018-12-21T02:19:51.175Z","sqft":null,"type":"country","__v":0,"flagCode":"us"},{"subLocations":["5c19c79fe54a573c6cb4ba94"],"_id":"5c1c4ddd22ab3f3b68d6e4b7","code":"MX","name":"Mexico","timestamp":"2018-12-21T02:20:13.903Z","sqft":null,"type":"country","__v":0,"flagCode":"mx"},{"subLocations":["5c19c7aae54a573c6cb4ba95"],"_id":"5c1c4dfc22ab3f3b68d6e4b8","code":"AT","name":"Austria","timestamp":"2018-12-21T02:20:44.751Z","sqft":null,"type":"country","__v":0,"flagCode":"at"},{"subLocations":["5c19c7b6e54a573c6cb4ba96"],"_id":"5c1c4e1b22ab3f3b68d6e4b9","code":"DBX","name":"Dubai","timestamp":"2018-12-21T02:21:15.703Z","sqft":null,"type":"country","__v":0,"flagCode":"ae"},{"subLocations":["5c19c7c0e54a573c6cb4ba97","5c19c7cbe54a573c6cb4ba98"],"_id":"5c1c4e3a22ab3f3b68d6e4ba","code":"DE","name":"Germany","timestamp":"2018-12-21T02:21:46.062Z","sqft":null,"type":"country","__v":0,"flagCode":"de"},{"subLocations":["5c19c7dce54a573c6cb4ba99","5c19c7e3e54a573c6cb4ba9a","5c19c7ece54a573c6cb4ba9b"],"_id":"5c1c4e5122ab3f3b68d6e4bb","code":"HU","name":"Hungary","timestamp":"2018-12-21T02:22:09.890Z","sqft":null,"type":"country","__v":0,"flagCode":"hu"},{"subLocations":["5c19c7f9e54a573c6cb4ba9c","5c19c804e54a573c6cb4ba9d"],"_id":"5c1c4e6822ab3f3b68d6e4bc","code":"SE","name":"Sweden","timestamp":"2018-12-21T02:22:32.396Z","sqft":null,"type":"country","__v":0,"flagCode":"se"},{"subLocations":["5c19c80de54a573c6cb4ba9e","5c19c818e54a573c6cb4ba9f"],"_id":"5c1c4e8522ab3f3b68d6e4bd","code":"CH","name":"Switzerland","timestamp":"2018-12-21T02:23:01.548Z","sqft":null,"type":"country","__v":0,"flagCode":"ch"},{"subLocations":["5c19c821e54a573c6cb4baa0"],"_id":"5c1c4e9d22ab3f3b68d6e4be","code":"NL","name":"The Netherlands","timestamp":"2018-12-21T02:23:25.375Z","sqft":null,"type":"country","__v":0,"flagCode":"nl"},{"subLocations":["5c19c82ae54a573c6cb4baa1","5c19c834e54a573c6cb4baa2"],"_id":"5c1c4eb122ab3f3b68d6e4bf","code":"UK","name":"UK","timestamp":"2018-12-21T02:23:45.658Z","sqft":null,"type":"country","__v":0,"flagCode":"gb"},{"subLocations":["5c19c840e54a573c6cb4baa3"],"_id":"5c1c4ec422ab3f3b68d6e4c0","code":"DK","name":"Denmark","timestamp":"2018-12-21T02:24:04.427Z","sqft":null,"type":"country","__v":0,"flagCode":"dk"},{"subLocations":["5c19c84de54a573c6cb4baa4"],"_id":"5c1c4ed922ab3f3b68d6e4c1","code":"IR","name":"Ireland","timestamp":"2018-12-21T02:24:25.012Z","sqft":null,"type":"country","__v":0,"flagCode":"ir"},{"subLocations":["5c19c856e54a573c6cb4baa5","5c19c861e54a573c6cb4baa6"],"_id":"5c1c4f0222ab3f3b68d6e4c2","code":"AU","name":"Australia","timestamp":"2018-12-21T02:25:06.401Z","sqft":null,"type":"country","__v":0,"flagCode":"au"},{"subLocations":["5c19c874e54a573c6cb4baa7","5c19c87ce54a573c6cb4baa8"],"_id":"5c1c4f1222ab3f3b68d6e4c3","code":"CH","name":"China","timestamp":"2018-12-21T02:25:22.807Z","sqft":null,"type":"country","__v":0,"flagCode":"ch"},{"subLocations":["5c19c885e54a573c6cb4baa9"],"_id":"5c1c4f2222ab3f3b68d6e4c4","code":"JP","name":"Japan","timestamp":"2018-12-21T02:25:38.469Z","sqft":null,"type":"country","__v":0,"flagCode":"jp"},{"subLocations":["5c19c890e54a573c6cb4baaa"],"_id":"5c1c4f3422ab3f3b68d6e4c5","code":"MY","name":"Malaysia","timestamp":"2018-12-21T02:25:56.300Z","sqft":null,"type":"country","__v":0,"flagCode":"my"},{"subLocations":["5c19c89fe54a573c6cb4baab"],"_id":"5c1c4f4b22ab3f3b68d6e4c6","code":"NZ","name":"New Zealand","timestamp":"2018-12-21T02:26:19.736Z","sqft":null,"type":"country","__v":0,"flagCode":"nz"},{"subLocations":["5c19c8a8e54a573c6cb4baac","5c19c8b2e54a573c6cb4baad"],"_id":"5c1c4f6122ab3f3b68d6e4c7","code":"SG","name":"Singapore","timestamp":"2018-12-21T02:26:41.066Z","sqft":null,"type":"country","__v":0,"flagCode":"sg"},{"subLocations":["5c1c4c0a22ab3f3b68d6e4b3","5c1c4cea22ab3f3b68d6e4b4"],"_id":"5c1c4f9a22ab3f3b68d6e4c8","code":"SA","name":"S. Asia","timestamp":"2018-12-21T02:27:38.533Z","sqft":null,"type":"continent","__v":0},{"subLocations":["5c1c4d9b22ab3f3b68d6e4b5","5c1c4dc722ab3f3b68d6e4b6","5c1c4ddd22ab3f3b68d6e4b7"],"_id":"5c1c4fb822ab3f3b68d6e4c9","code":"NA","name":"N. America","timestamp":"2018-12-21T02:28:08.993Z","sqft":null,"type":"continent","__v":0},{"subLocations":["5c1c4dfc22ab3f3b68d6e4b8","5c1c4e1b22ab3f3b68d6e4b9","5c1c4e3a22ab3f3b68d6e4ba","5c1c4e5122ab3f3b68d6e4bb","5c1c4e6822ab3f3b68d6e4bc","5c1c4e8522ab3f3b68d6e4bd","5c1c4e9d22ab3f3b68d6e4be","5c1c4eb122ab3f3b68d6e4bf","5c1c4ec422ab3f3b68d6e4c0","5c1c4ed922ab3f3b68d6e4c1"],"_id":"5c1c500022ab3f3b68d6e4ca","code":"EMEA","name":"EMEA","timestamp":"2018-12-21T02:29:20.869Z","sqft":null,"type":"continent","__v":0},{"subLocations":["5c1c4f0222ab3f3b68d6e4c2","5c1c4f1222ab3f3b68d6e4c3","5c1c4f2222ab3f3b68d6e4c4","5c1c4f3422ab3f3b68d6e4c5","5c1c4f4b22ab3f3b68d6e4c6","5c1c4f6122ab3f3b68d6e4c7"],"_id":"5c1c502822ab3f3b68d6e4cb","code":"APAC","name":"APAC","timestamp":"2018-12-21T02:30:00.287Z","sqft":null,"type":"continent","__v":0},{"subLocations":["5c1c4f9a22ab3f3b68d6e4c8","5c1c4fb822ab3f3b68d6e4c9","5c1c500022ab3f3b68d6e4ca","5c1c502822ab3f3b68d6e4cb"],"_id":"5c1e69a621a3a44dacc1d1e1","code":"GLB","name":"Virtusa Global","timestamp":"2018-12-22T16:43:18.774Z","sqft":null,"type":"global","__v":0}]};
+	  
+	  
+	  var sLocs = _.filter(locations.data, [ 'type' , 'global']);
+	  var rLocs = _.filter(locations.data, [ 'type' , 'continent']);
+	  var cLocs = _.filter(locations.data, [ 'type' , 'country']);
+	  var lLocs = _.filter(locations.data, [ 'type' , 'location']);
+	  
+	  
+	   $('#sl').append(
+      
+	  "<option value='"+sLocs[0]._id+"' >"+sLocs[0].name+"</option>"
+    );
+	
+	var selRegions = _.filter(rLocs, function(loc) {return _.includes(sLocs[0].subLocations, loc._id);});
+	  
+	  
+	
+	  
+	 
+	  
+	  var rStr = "<option value='' disabled='disabled' selected='selected'>Any</option>";
+	
+	_.map(selRegions, function(r) {rStr += "<option value='"+r._id+"'>"+r.name+"</option>"; });
+							   
+		$('#rl').append(
+      
+	  rStr
+    );		
+	
+    
+	  
+	  $('#cl').append(
+      
+	  "<option value='' disabled='disabled' selected='selected'>Any</option>"
+    );
+							   
+						   $('#ll').append(
+      
+  "<option value='' disabled='disabled' selected='selected'>Any</option>"   );
+							   
+					   
+							   
+							   
+	  
+	  $("#rl").on('change', function() {
+							   
+							   $('#ll').empty().html(
+      
+	  "<option value='' disabled='disabled' selected='selected'>Any</option>"
+    );
+							   
+							   $("#ll").trigger('contentChanged');
+//     console.log($(this).val());
+							   
+							   
+							   var region = _.filter(rLocs, ['_id', $(this).val()]);
+					   
+					   var selCountries = _.filter(cLocs, function(loc) {return _.includes(region[0].subLocations, loc._id);});
+	  
+// 	  console.log(selCountries);
+	  
+	  
+	
+	  
+	 
+	  
+	  var cStr = "<option value='' disabled='disabled' selected='selected'>Any</option>";
+	
+	_.map(selCountries, function(r) {cStr += "<option value='"+r._id+"'>"+r.name+"</option>"; });
+	  
+	  $("#cl")
+        .empty()
+        .html(cStr);
+	  
+	  $("#cl").trigger('contentChanged');
+	  
+	  
+	  data1.data.columns[1] = _.map(data1.data.columns[1], function(val) { 
+		  return _.isNumber(val) ? (val + _.random(0, 10) * 10) % 100 : val;
+	  }
+								   );
+	  
+	  chart1.load({'columns' : data1.data.columns});
+
+});
+	
+	
+	$("#cl").on('change', function() {
+    console.log($(this).val());
+							   
+							   
+							   var country = _.filter(cLocs, ['_id', $(this).val()]);
+					   
+					   var selLocations = _.filter(lLocs, function(loc) {return _.includes(country[0].subLocations, loc._id);});
+	  
+// 	  console.log(selCountries);
+	  
+	  
+	
+	  
+	 
+	  
+	  var lStr = "<option value='' disabled='disabled' selected='selected'>Any</option>";
+	
+	_.map(selLocations, function(r) {lStr += "<option value='"+r._id+"'>"+r.name+"</option>"; });
+	  
+	  $("#ll")
+        .empty()
+        .html(lStr);
+	  
+	  $("#ll").trigger('contentChanged');
+		
+		data1.data.columns[1] = _.map(data1.data.columns[1], function(val) { 
+		  return _.isNumber(val) ? (val + _.random(0, 10) * 10) % 100 : val;
+	  }
+								   );
+	  
+	  chart1.load({'columns' : data1.data.columns});
+	  
+});
+	$("#ll").on('change', function() {
+		data1.data.columns[1] = _.map(data1.data.columns[1], function(val) { 
+		  return _.isNumber(val) ? (val + _.random(0, 10) * 10) % 100 : val;
+	  }
+								   );
+	  
+	  chart1.load({'columns' : data1.data.columns});
+		
+		
+		});
+	
+	  
+	  $('select').on('contentChanged', function() {
+    // re-initialize (update)
+    //$(this).material_select();
+	  M.FormSelect.init(this);
+  });
+
+    $('.sidenav').sidenav();
+	  $('select').formSelect();
+	  
+	  
+	  MON = {
+  Jan: 1,
+  Feb: 2,
+  Mar: 3,
+  Apr: 4,
+  May: 5,
+  Jun: 6,
+  Jul: 7,
+  Aug: 8,
+  Sep: 9,
+  Oct: 10,
+  Nov: 11,
+  Dec: 12,
+};
+	
+	var data1 = {
+			bindto: "#chart1",
+			data: {
+				x: "x",
+				columns: [
+				  ["x", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31"],
+				  ["sample", 30, 20, 50, 40, 60, 50.7, 30, 20, 50, 40],
+					["target", 87, 87, 87, 87, 87, 87, 87, 87, 87, 87],
+				],
+				names: {
+				  sample: 'sqft/seat'
+				},
+				colors: {
+					'sample': '#ff0000',
+					'target': 'pink'
+				},
+				labels: {
+				  format: {
+					sample: function (x) {
+					  return _.ceil(x);
+					}
+				  },
+
+				  position: {
+					x: 0,
+					y: -10
+				  }
+				},
+			  },
+
+
+			  axis: {
+
+				x: {
+				  type: "timeseries",
+				  height: 80,
+				  tick: {
+					rotate: -90,
+					multiline: false,
+					tooltip: true,
+					format: function (x) {
+					  var FY = _.parseInt(x.getFullYear()) + _.floor((x.getMonth() + 9) / 12);
+					  return "FY" + (FY % 1000) + "-" + _.toUpper(_.filter(Object.keys(MON), function(key){return MON[key] === x.getMonth() + 1;})[0]);
+					}
+				  }
+				},
+
+				y: {
+				  max: 100,
+
+				  tick: {
+					format: function (x) { return x; },
+				  }
+				}
+			  },
+		};
+	  
+	  
+	  var chart1 = bb.generate(data1);
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  var chart2 = bb.generate({
+			bindto: "#chart2",
+			data: {
+				x: "x",
+				columns: [
+				  ["x", "2018-03-31", "2018-04-30", "2018-05-31", "2018-06-30", "2018-07-31", "2018-08-31", "2018-09-30", "2018-10-31", "2018-11-30", "2018-12-31"],
+				  ["sample", 30, 20, 50, 40, 60, 50.7, 30, 20, 50, 40]
+				],
+				names: {
+				  sample: 'sqft/seat'
+				},
+				labels: {
+				  format: {
+					sample: function (x) {
+					  return _.ceil(x);
+					}
+				  },
+
+				  position: {
+					x: 0,
+					y: -10
+				  }
+				},
+			  },
+
+
+			  axis: {
+
+				x: {
+				  type: "timeseries",
+				  height: 80,
+				  tick: {
+					rotate: -90,
+					multiline: false,
+					tooltip: true,
+					format: function (x) {
+					  var FY = _.parseInt(x.getFullYear()) + _.floor((x.getMonth() + 9) / 12);
+					  return "FY" + (FY % 1000) + "-" + _.toUpper(_.filter(Object.keys(MON), function(key){return MON[key] === x.getMonth() + 1;})[0]);
+					
+					}
+				  }
+				},
+
+				y: {
+				  max: 90,
+					min:10,
+				  tick: {
+					format: function (x) { return x + '%'; },
+				  }
+				}
+			  },
+		});
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+  }); 
+})(jQuery); 
+]]></client_script>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_294297_seat_mana_mat.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" />
+	<link href="https://naver.github.io/billboard.js/release/latest/dist/theme/insight.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  
+	<style>
+	
+	/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body{
+		font-family: 'Montserrat' !important
+		
+		}
+		
+		
+
+		.bb svg {
+		font-family: 'Montserrat' !important;
+		}
+
+		.bb-tooltip-container {
+		font-family: 'Montserrat' !important;
+		}
+
+	
+	
+	
+	</style>
+</head>
+<body>
+	<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+  <nav class="amber lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        
+        <li class="active"><a href="#">Seat Allocation</a></li>
+        <li><a href="#">Seat Management</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        
+        <li><a href="#">Seat Allocation</a></li>
+        <li><a href="#">Seat Management</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+		
+		<div class="container">
+	<div class="section">
+		<div class="row">
+    
+		<div class="input-field col s12 m3">
+			<select id="sl">
+			  <!-- <option value="" disabled="disabled" selected="selected">Choose your option</option>
+			  <option value="1">Option 1</option>
+			  <option value="2">Option 2</option>
+			  <option value="3">Option 3</option> -->
+			</select>
+			<label>Select a strategic location</label>
+		  </div>
+		
+		<div class="input-field col s12 m3">
+			<select id="rl">
+			  <!-- <option value="" disabled="disabled" selected="selected">Choose your option</option>
+			  <option value="1">Option 1</option>
+			  <option value="2">Option 2</option>
+			  <option value="3">Option 3</option> -->
+			</select>
+			<label>Select a region</label>
+		  </div>
+		
+		<div class="input-field col s12 m3">
+			<select id="cl">
+			  <!-- <option value="" disabled="disabled" selected="selected">Choose your option</option>
+			  <option value="1">Option 1</option>
+			  <option value="2">Option 2</option>
+			  <option value="3">Option 3</option> -->
+			</select>
+			<label>Select a country</label>
+		  </div>
+		
+		
+		
+		<div class="input-field col s12 m3">
+			<select id="ll">
+			  <!-- <option value="" disabled="disabled" selected="selected">Choose your option</option>
+			  <option value="1">Option 1</option>
+			  <option value="2">Option 2</option>
+			  <option value="3">Option 3</option> -->
+			</select>
+			<label>Select a location</label>
+		  </div>
+		
+		
+		</div>
+  </div>
+		</div>
+		
+		
+		
+		<div class="container">
+	<div class="section">
+		<div class="row">
+    
+		<div class="input-field col s12 m6">
+			
+			<div class="card">
+        
+        <div class="card-content">
+			<span class="card-title">Graph of sqft/seat</span>
+          <div id="chart1"></div>
+        </div>
+      </div>
+				
+				
+			
+			
+			</div>
+			
+			
+			
+			<div class="input-field col s12 m6">
+			
+			<div class="card">
+        
+        <div class="card-content">
+			<span class="card-title">Graph of Seat Utilization Percentage</span>
+          <div id="chart2"></div>
+        </div>
+      </div>
+				
+				
+			
+			
+			</div>
+		
+		
+		</div>
+  </div>
+		</div>
+
+
+  
+
+  <footer class="page-footer blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Product Bio</h5>
+          <p class="grey-text text-lighten-4">This is a dashboard for seat management and allocation</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <!-- <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li> -->
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <!-- <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <!-- Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> -->
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+
+	<script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.min.js"></script>
+	
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    
+  <script >
+		
+
+
+
+
+
+		</script>
+</j:jelly>
+  </body>
+</html>
+
+
+]]></html>
+        <name>mat</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-23 11:05:23</sys_created_on>
+        <sys_id>9fffd727db432300fc3164d74896194f</sys_id>
+        <sys_mod_count>87</sys_mod_count>
+        <sys_name>mat</sys_name>
+        <sys_package display_value="Seat Management" source="x_294297_seat_mana">b544d376db0b2300fc3164d748961970</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Seat Management">b544d376db0b2300fc3164d748961970</sys_scope>
+        <sys_update_name>sys_ui_page_9fffd727db432300fc3164d74896194f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-01-24 08:04:02</sys_updated_on>
+    </sys_ui_page>
+</record_update>
